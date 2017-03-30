@@ -1,0 +1,121 @@
+*{
+	box-sizing: border-box;
+}
+input,button{
+	-moz-box-shadow:0px 2px 3px rgba(0,0,0,0.2); 
+	-webkit-box-shadow:0px 2px 3px rgba(0,0,0,0.2); 
+	box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+}
+body{
+	background: #67c0da;
+	color: #fff;
+	font-family:"微软雅黑";
+}
+.container{
+	position: relative;
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 0 10px;	
+}
+h1{
+	text-align: center;
+}
+
+/* 添加新项 */
+.add-task{
+	display: flex;
+	height: 65px;
+	margin-bottom: 10px;
+}
+.add-task input{
+	flex:86%;
+	color:grey;
+	margin-right: 1%;
+	background-color: #9cd9ea;
+	outline:0;
+}
+.add-task button{
+	flex:13%;
+	color: #fff;
+	min-width: 80px;
+	/*font-weight: bold;*/
+	cursor: pointer;
+	background-color: #f97d7d;
+}
+.add-task input:hover{
+	background-color: #a5dbea;
+}
+.add-task input:focus{
+	background-color: #fff;
+	-moz-box-shadow:0px 2px 3px rgba(0,0,0,0.2); 
+	-webkit-box-shadow:0px 2px 3px rgba(0,0,0,0.2); 
+	box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+}
+
+.add-task button:hover{
+	background-color:#f1a5a5;
+	transition: background 0.4s linear;
+}
+input,.task-item{
+	padding: 0 15px;
+}
+div,input[type=text],input[type=date],button[type=submit]{
+	border-radius: 10px;
+	border:0px;
+	outline: 0;
+}
+/* -------------------------- */
+.task-item{
+	background-color: #fff;
+	width:100%;
+	height: 60px;
+	color: #7f83b3;
+	margin-bottom: 5px;
+	line-height: 60px;
+	cursor:pointer;
+	display: none;
+}
+.task-item:hover{
+	background-color: #eee;
+	transition: background 0.4s linear;
+}
+.delBtn{
+	display: none;
+	/*visibility: hidden;*/
+	float: right;
+	border:none;
+	/*border:1px solid red;*/
+	background: none;
+	font-size: 40px;
+	color:#67c0da;
+	box-shadow: none;
+	outline: 0;
+	cursor: pointer;
+}
+.delBtn:after{
+	content: "×";
+}
+/*这句！！！*/
+.task-item:hover .delBtn{
+	display: block;
+
+}
+/******************* 遮罩层 ********************/
+.mask{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(100,100,100,0.6);
+	display: none;
+}
+.task-detail{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	right: 0;
+	top: 0;
+	background-color: #fff;
+	display: none;
+}
