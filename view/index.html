@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"><!-- normalize.css -->
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body>
+<div class="container"><!-- 总容器 -->
+<h1>Todo Web App</h1>
+	<form class="add-task">
+		<input type="text" placeholder="eg：周一记得改简历" autocomplete="off" autofocus="autofocus" name="">
+		<button type="submit">添加</button>
+	</form>
+	<div class="task-list" id="task-list"><!-- 清单列表开始 -->
+		<div class="task-item" item-index="">
+			<input type="checkbox" class="check" name="">
+			<label class="task-content"></label>
+			<button class="delBtn"></button>
+		</div>
+	</div><!-- 清单列表结束 -->
+	<div class="mask"></div>
+	<div class="task-detail"><!-- 清单详情 -->
+		<div class="content"></div><!-- 双击变成input -->
+		<div class="desc"></div><!-- 描述 -->
+		<div class="remind"><!-- 添加提醒事件 -->
+			<input type="date" name="">
+			<button type="submit">submit</button>
+		</div>
+	</div>
+	
+</div>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/store.js/1.3.20/store.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+</body>
+</html>
